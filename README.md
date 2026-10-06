@@ -4,11 +4,11 @@ A static Next.js company website at https://techabanca.com, with a product portf
 
 ## Catalogue introduction
 
-Catalogue appears on the homepage, Products page, Company page and shared footer. The dedicated `/catalogue/` page includes an interactive three-screen tour, business use cases, capabilities, a guided workflow, actual desktop/mobile screenshots, current pricing and availability, FAQs and application links.
+Catalogue appears on the homepage, Products page, Company page and shared footer. The dedicated `/catalogue/` page includes an interactive four-screen tour, business use cases, capabilities, a guided workflow, actual desktop/mobile screenshots, current pricing and availability, FAQs and application links.
 
-The five optimized JPEGs in `public/images/catalogue/` come from the actual locally running Catalogue application with synthetic **Forma Studio** demo records. Captions identify this source. They do not depict a published customer website.
+The six optimized JPEGs in `public/images/catalogue/example-industries/` are the exact approved captures used on https://catalogue.techabanca.com. They show the **Example Industries** production account and its published website at https://example-industries.techabanca.com. Desktop captures are 1440 × 960; the mobile capture is 390 × 844. They total 410,365 bytes, within the existing 500,000-byte Catalogue image budget. No local demo captures or private preview links are used. Captions and alt text identify the production account or published website. The published result appears in the shared product feature, Company page product section, Catalogue hero, social preview and fourth tour panel, with a link to the live business website.
 
-Catalogue is described as **early access**. Workspace creation requires no payment method; eligible owners/admins explicitly start the optional 14-day trial from Subscription. Signup does not start a trial, publish a website or activate paid access. Public website activation is being finalized, and paid prices and checkout are not available yet. No automatic Billing–Catalogue record synchronization is advertised.
+Catalogue is described as **early access**. Workspace creation requires no payment method; eligible owners/admins explicitly start the optional 14-day trial from Subscription. Signup does not start a trial, publish a website or activate paid access. The Example Industries pilot website is published; wider public website activation is being finalized, and paid prices and checkout are not available yet. No automatic Billing–Catalogue record synchronization is advertised.
 
 ## Local Windows workflow
 

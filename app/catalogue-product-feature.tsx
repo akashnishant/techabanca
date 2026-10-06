@@ -11,8 +11,8 @@ export function CatalogueProductFeature() {
       <p>{catalogueProduct.description}</p>
       <ul className="catalogue-feature-tags"><li>Products + services</li><li>Website content</li><li>Customer enquiries</li></ul>
       <div className="product-actions"><a className="button button-light" href={catalogueProduct.marketingHref}>Explore Catalogue <ArrowUpRight size={18} /></a><a className="button button-text" href={catalogueProduct.appHref} target="_blank" rel="noreferrer">Open Catalogue <ArrowUpRight size={18} /></a></div>
-      <p className="catalogue-feature-note">Workspace setup is available. Public website activation is being finalized.</p>
+      <p className="catalogue-feature-note">Workspace setup is available. Explore the live Example Industries example; wider public activation is being finalized.</p>
     </div>
-    <div className="product-visual catalogue-feature-visual"><CatalogueScreen file="catalogue" label="TECHABANCA CATALOGUE / YOUR OFFER" alt="Actual Catalogue workspace showing six demo products and services with categories, search and status filters" /></div>
+    <div className="product-visual catalogue-feature-visual"><CatalogueScreen file="published" label="TECHABANCA CATALOGUE / THE PUBLISHED RESULT" alt="Published Example Industries website showing the LED TV catalogue item and business navigation on its production domain" /></div>
   </article>;
 }
