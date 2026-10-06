@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import "./catalogue-presentation.css";
 
 export const metadata: Metadata = {
   title: { default: "Techabanca — Engineering what's next", template: "%s | Techabanca" },
-  description: "Techabanca builds thoughtful software products and digital systems. Explore Techabanca Billing, product engineering, cloud solutions, and intelligent automation.",
+  description: "Techabanca builds thoughtful software products and digital systems. Explore Techabanca Billing, Techabanca Catalogue, product engineering, cloud solutions, and intelligent automation.",
   icons: { icon: "/favicon.svg", shortcut: "/favicon.svg" },
 };
 

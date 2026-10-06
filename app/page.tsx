@@ -1,6 +1,7 @@
 import { ArrowDownRight, ArrowUpRight, CircuitBoard, Cloud, Code2, Layers3, ScanLine, ShieldCheck, Sparkles } from "lucide-react";
 import { PageFrame, Reveal, SectionHeader, CtaBand } from "./site-ui";
 import { BillingProductFeature } from "./billing-product-feature";
+import { CatalogueProductFeature } from "./catalogue-product-feature";
 
 const capabilities = [
   { number: "01", icon: <Code2 />, title: "Digital products", text: "Thoughtful interfaces and dependable platforms, designed around the work people actually do.", href: "/services#product-engineering" },
@@ -27,7 +28,7 @@ export default function Home() {
 
       <section className="intro-section section-pad" id="approach"><div className="container intro-grid"><Reveal><div className="section-kicker"><span>01 / OUR PERSPECTIVE</span><span className="section-rule" /></div></Reveal><Reveal><div><h2 className="display-heading">Technology is only powerful when it <span>moves people forward.</span></h2><p className="lead-copy">From a better way to send an invoice to systems that connect an entire business, we focus on the details that turn ambitious ideas into useful experiences.</p><a className="inline-link" href="/company">Get to know Techabanca <ArrowUpRight size={18}/></a></div></Reveal></div></section>
 
-      <section className="product-section section-pad" id="products"><div className="container"><Reveal><SectionHeader index="02 / OUR PRODUCTS" title={<>One company. <span>Useful products.</span></>} description="We build practical tools for real business workflows. Techabanca Billing is our first live product, with more products to follow as we grow." /></Reveal><Reveal><BillingProductFeature /></Reveal><a className="inline-link" href="/products">Explore all products <ArrowUpRight size={18}/></a></div></section>
+      <section className="product-section section-pad" id="products"><div className="container"><Reveal><SectionHeader index="02 / OUR PRODUCTS" title={<>One company. <span>Useful products.</span></>} description="Practical tools for different parts of your business. Billing brings clarity to business records. Catalogue helps you present your products and services with care." /></Reveal><div className="company-product-stack"><Reveal><BillingProductFeature /></Reveal><Reveal><CatalogueProductFeature /></Reveal></div><a className="inline-link" href="/products">Explore all products <ArrowUpRight size={18}/></a></div></section>
 
       <section className="capabilities-section section-pad" id="capabilities"><div className="container"><Reveal><SectionHeader index="03 / WHAT WE DO" title={<>Expertise across the <span>digital stack.</span></>} description="We connect strategy, design, and engineering to deliver technology that solves the right problems." /></Reveal><div className="capabilities-list">{capabilities.map(item => <Reveal key={item.number}><a href={item.href} className="capability-row"><span className="cap-number">{item.number}</span><span className="cap-icon">{item.icon}</span><span className="cap-title">{item.title}</span><span className="cap-desc">{item.text}</span><span className="cap-arrow"><ArrowUpRight size={24}/></span></a></Reveal>)}</div></div></section>
 

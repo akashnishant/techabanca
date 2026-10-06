@@ -1,37 +1,55 @@
-# Techabanca corporate website
+# Techabanca company website
 
-A responsive corporate site for Techabanca, with dedicated pages for Billing, Services, Solutions, Company, and Contact. The site is a static Next.js export; the Billing application remains a separate product and is not included in this repository.
+A static Next.js company website at https://techabanca.com, with a product portfolio for Techabanca Billing and Techabanca Catalogue. Each application runs separately: https://billing.techabanca.com and https://catalogue.techabanca.com.
 
-## Run locally
+## Catalogue introduction
 
-Requires Node.js 22.13 or newer. Install dependencies with `corepack pnpm install --frozen-lockfile`, then run `corepack pnpm run dev:pages`. Open the local address printed by Next.js.
+Catalogue appears on the homepage, Products page, Company page and shared footer. The dedicated `/catalogue/` page includes an interactive three-screen tour, business use cases, capabilities, a guided workflow, actual desktop/mobile screenshots, current pricing and availability, FAQs and application links.
 
-## Build for Cloudflare Pages
+The five optimized JPEGs in `public/images/catalogue/` come from the actual locally running Catalogue application with synthetic **Forma Studio** demo records. Captions identify this source. They do not depict a published customer website.
 
-Run `corepack pnpm run build:pages`. The complete static site is generated in `out/`, including the HTML for each route and the site images. The application does not require a database or server-side runtime.
+Catalogue is described as **early access**. Workspace creation requires no payment method; eligible owners/admins explicitly start the optional 14-day trial from Subscription. Signup does not start a trial, publish a website or activate paid access. Public website activation is being finalized, and paid prices and checkout are not available yet. No automatic Billing–Catalogue record synchronization is advertised.
 
-To deploy from a Git repository in Cloudflare Pages, use:
+## Local Windows workflow
 
-| Setting | Value |
-| --- | --- |
-| Framework preset | Next.js (Static HTML Export) |
-| Build command | `corepack pnpm run build:pages` |
-| Build output directory | `out` |
-| Production branch | Your production branch, such as `main` |
+Requires Node.js 22.13 or newer and the pinned package manager. In the editable source folder:
 
-The site can be deployed to Cloudflare Pages without owning a domain; Cloudflare provides a `*.pages.dev` address. Add `techabanca.in` as a custom domain after it is purchased and configured in your Cloudflare account. The Billing application is separate and currently runs at `taxlume.pages.dev`; the company's Billing page does not link to an unreleased rebrand. No Billing app traffic is proxied through this static site.
+```powershell
+corepack pnpm install --frozen-lockfile
+corepack pnpm run dev:pages
+```
 
-## Before a public launch
+For a production build:
 
-- The contact page marks email enquiries as opening soon during this Pages preview. Set up an inbox or provide an existing working address before public launch; then restore the mail and copy links using `app/contact/copy-email.tsx`.
-- Review the company identity and legal details once the business entity is registered. This draft does not assert a registered legal name, certifications, clients, or case studies.
-- Add the Billing application link when the product rebrand is deployed and its new hostname is active.
+```powershell
+corepack pnpm run build:pages
+node .\node_modules\typescript\bin\tsc --noEmit
+```
+
+The static export is written to `out/`. It needs no database or server-side application runtime. Use the explicit `dev:pages` and `build:pages` commands for this Cloudflare workflow.
+
+## Version control and publishing
+
+The existing GitHub repository is https://github.com/akashnishant/techabanca. Its `main` branch tracks the built static site for the current deployment workflow. The editable Next.js project is preserved on `source/company-website`. Source and static release commits are recorded together in the release evidence.
+
+The production Cloudflare Pages project is **techabanca-company**, with the existing custom domain **techabanca.com**. Deploy only the verified export directory, using the canonical locally installed Wrangler and the exact production project and branch. Never deploy the source branch or dependency/build-cache folders as site assets. Do not copy application secrets or private data into this static project.
+
+The separate task to repair automatic GitHub-to-Pages deployments remains deferred. This product introduction does not change build settings, DNS, secrets, Billing infrastructure or Catalogue infrastructure.
+
+## Validation
+
+Build and type-check the source. Browser acceptance covers homepage and portfolio discovery, the direct Catalogue route and metadata, every product-tour tab and its arrow/Home/End keyboard controls, actual image loads, section anchors, FAQs, account/application/pricing links, Products navigation state, mobile-menu behavior, and layouts from 320 to 1440 pixels.
+
+Check all existing company routes, the Billing showcase and its screenshots, and anonymous responses from the separate Billing and Catalogue applications. Review desktop and mobile screenshots before publishing and repeat the relevant acceptance checks against production.
 
 ## Source layout
 
-- `app/`: page content, interactions, metadata, and design system styles
-- `components/ui/`: accessible accordion and tabs primitives used in the site
-- `public/images/`: optimized site artwork
-- `next.config.ts`: static export and trailing-slash routing
+- `app/`: routes, metadata, interactions and site styles.
+- `app/catalogue/`: Catalogue product page, screenshot component and interactive tour.
+- `app/catalogue-product-feature.tsx`: homepage and portfolio introduction.
+- `app/product-catalog.ts`: product identities and application/marketing destinations.
+- `components/ui/`, `lib/`, `vendor/`: shared interface components, utilities and licensed styles.
+- `public/`: favicon and optimized site/product images.
+- `next.config.ts`: static export and trailing-slash routing.
 
-The site is also maintained as a private ChatGPT Sites preview. Files under `.openai/`, `build/`, and `scripts/` in the working checkout belong to that preview setup and are not needed in a Cloudflare Pages source upload.
+Legal and Trust Center implementation remains parked until the separate registration and launch requirements are ready. This product introduction adds no legal documents, certifications, testimonials, registration claims or live payment offers.
