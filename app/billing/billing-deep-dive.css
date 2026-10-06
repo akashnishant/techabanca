@@ -1,0 +1,295 @@
+.billing-story {
+  background: #101e20;
+  color: #f2f6f1;
+}
+
+.billing-story-heading {
+  max-width: 900px;
+  margin-bottom: 58px;
+}
+
+.billing-story-kicker {
+  display: block;
+  margin-bottom: 20px;
+  color: #9ac8a8;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.13em;
+}
+
+.billing-story-heading .display-heading,
+.billing-reports-story .display-heading {
+  margin-bottom: 24px;
+}
+
+.billing-story-heading > p,
+.billing-story-split p,
+.billing-reports-story p {
+  max-width: 670px;
+  color: #c5d1cb;
+  font-size: 18px;
+  line-height: 1.75;
+}
+
+.billing-story-split {
+  display: grid;
+  grid-template-columns: minmax(220px, 0.8fr) minmax(0, 1.2fr);
+  align-items: center;
+  gap: clamp(32px, 6vw, 110px);
+  padding: clamp(32px, 5vw, 75px);
+  border: 1px solid #36504b;
+  background: #172b2b;
+}
+
+.billing-story-icon,
+.billing-reports-mark {
+  display: flex;
+  min-height: 230px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  border: 1px solid #45655c;
+  color: #c2e2c8;
+}
+
+.billing-story-icon span,
+.billing-reports-mark span {
+  font-size: 12px;
+  letter-spacing: 0.14em;
+}
+
+.billing-story-split h3 {
+  margin: 0 0 20px;
+  font-size: clamp(28px, 3.5vw, 46px);
+  line-height: 1.15;
+}
+
+.billing-expenses-story {
+  background: #dce8de;
+  color: #102023;
+}
+
+.billing-expenses-story .billing-story-kicker {
+  color: #36634a;
+}
+
+.billing-expenses-story .billing-story-heading > p {
+  color: #365149;
+}
+
+.billing-expenses-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.billing-expenses-card {
+  min-height: 240px;
+  padding: clamp(26px, 3vw, 44px);
+  background: #f4f7f0;
+  border: 1px solid #c3d2c6;
+}
+
+.billing-expenses-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 34px;
+  color: #386b50;
+  font-size: 12px;
+  letter-spacing: 0.12em;
+}
+
+.billing-expenses-card h3 {
+  margin: 0 0 14px;
+  font-size: clamp(22px, 2.4vw, 30px);
+}
+
+.billing-expenses-card p,
+.billing-expenses-note p {
+  margin: 0;
+  color: #405b50;
+  line-height: 1.7;
+}
+
+.billing-expenses-note {
+  margin-top: 18px;
+  padding: 27px 32px;
+  border-left: 3px solid #447c59;
+  background: #cbdccf;
+}
+
+.billing-expenses-note .billing-story-kicker {
+  margin-bottom: 10px;
+}
+
+.billing-reports-story {
+  background: #132525;
+  color: #f2f6f1;
+}
+
+.billing-reports-grid {
+  display: grid;
+  grid-template-columns: minmax(220px, 0.75fr) minmax(0, 1.25fr);
+  align-items: center;
+  gap: clamp(35px, 6vw, 110px);
+}
+
+.billing-reports-mark {
+  min-height: 320px;
+}
+
+.billing-reports-story p {
+  margin-bottom: 30px;
+}
+
+@media (max-width: 760px) {
+  .billing-story-heading {
+    margin-bottom: 36px;
+  }
+
+  .billing-story-split,
+  .billing-reports-grid,
+  .billing-expenses-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .billing-story-split {
+    padding: 24px;
+  }
+
+  .billing-story-icon,
+  .billing-reports-mark {
+    min-height: 160px;
+  }
+
+  .billing-expenses-card {
+    min-height: auto;
+  }
+
+  .billing-expenses-note {
+    padding: 24px;
+  }
+}
+
+
+/* BILLING SCREENSHOT PRESENTATION */
+.billing-product-preview {
+  background: #0d191b;
+  color: #f3f7f2;
+}
+
+.billing-preview-heading {
+  max-width: 900px;
+  margin-bottom: 46px;
+}
+
+.billing-preview-heading > p {
+  max-width: 720px;
+  margin: 0;
+  color: #c5d1cb;
+  font-size: 18px;
+  line-height: 1.75;
+}
+
+.billing-screen-frame {
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid #38534d;
+  background: #f2f6f2;
+  box-shadow: 0 30px 90px rgba(1, 12, 11, 0.28);
+}
+
+.billing-screen-toolbar {
+  min-height: 46px;
+  padding: 0 17px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  background: #14282a;
+  color: #afd7b9;
+  font-size: 10px;
+  letter-spacing: 0.13em;
+}
+
+.billing-screen-toolbar-light {
+  background: #29493f;
+}
+
+.billing-screen-dots {
+  display: flex;
+  gap: 6px;
+}
+
+.billing-screen-crop {
+  overflow: hidden;
+  background: #eef3ef;
+}
+
+.billing-screen-crop img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+}
+
+.billing-dashboard-crop {
+  aspect-ratio: 16 / 9;
+}
+
+.billing-feature-screen {
+  margin: 0 0 42px;
+  border-color: #b9cdbd;
+  box-shadow: 0 24px 60px rgba(39, 77, 58, 0.13);
+}
+
+.billing-expenses-crop {
+  aspect-ratio: 16 / 8.2;
+}
+
+.billing-reports-screen {
+  align-self: stretch;
+}
+
+.billing-reports-crop {
+  aspect-ratio: 5 / 6;
+}
+
+.billing-screen-frame figcaption {
+  padding: 16px 20px 18px;
+  color: #486057;
+  background: #f3f7f2;
+  font-size: 13px;
+  line-height: 1.55;
+}
+
+.billing-reports-screen figcaption {
+  background: #edf3ef;
+}
+
+@media (max-width: 760px) {
+  .billing-preview-heading {
+    margin-bottom: 30px;
+  }
+
+  .billing-dashboard-crop,
+  .billing-expenses-crop,
+  .billing-reports-crop {
+    aspect-ratio: auto;
+  }
+
+  .billing-dashboard-crop img,
+  .billing-expenses-crop img,
+  .billing-reports-crop img {
+    height: auto;
+    object-fit: contain;
+  }
+
+  .billing-screen-toolbar {
+    font-size: 9px;
+    letter-spacing: 0.08em;
+  }
+}
